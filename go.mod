@@ -1,4 +1,4 @@
-module github.com/GoogleCloudPlatform/golang-samples/run/helloworld
+module dawn-pineapples-api
 
 go 1.20
 

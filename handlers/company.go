@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"dbname"     // Adjust the import path as necessary
-	"../models" // Adjust the import path as necessary
+	"github.com/aravind-m-s/dawn-pineapples-api/db"
+	"github.com/aravind-m-s/dawn-pineapples-api/models"
 	"github.com/google/uuid"
 	"github.com/gorilla/mux"
 )

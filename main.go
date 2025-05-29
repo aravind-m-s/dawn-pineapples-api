@@ -6,12 +6,13 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/aravind-m-s/dawn-pineapples-api/db"
+	"github.com/aravind-m-s/dawn-pineapples-api/handlers"
 	"github.com/gorilla/mux"
-	"./db"
-	"./handlers"
 )
 
-func main() {db.InitDB()
+func main() {
+	db.InitDB()
 	log.Print("starting server...")
 
 	router := mux.NewRouter()
@@ -37,6 +38,7 @@ func main() {db.InitDB()
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = "3000"
-	}log.Printf("server listening on port %s", port)
+	}
+	log.Printf("server listening on port %s", port)
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", port), router))
 }
